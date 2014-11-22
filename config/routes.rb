@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   root 'static_pages#main_page'
 
+  resources :tweets
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
