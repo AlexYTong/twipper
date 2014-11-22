@@ -1,0 +1,8 @@
+News Feed:
+<ul>
+<% @tweets.each do |tweet| %>
+
+    <li><%= tweet.user.email%> || <%= tweet.tweet %></li>
+
+<% end %>
+</ul>
