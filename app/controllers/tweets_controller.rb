@@ -12,7 +12,8 @@ class TweetsController < ApplicationController
     end
 
     def update
-  #      @tweet = Tweet.update(, tweet_params)
+        @tweet = Tweet.update(params[:id], tweet_params)
+        @tweets = Tweet.all
         flash[:success] = "You have updated"
         render 'new'
     end
