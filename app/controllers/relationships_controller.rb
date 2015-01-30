@@ -11,6 +11,13 @@ class RelationshipsController < ApplicationController
         else
             flash[:danger]  = "The user cannot be followed at this time"
         end
+        redirect_to tweets_path
+    end
+
+    def delete
+        @user = User.find(@relationship.followed_id)
+        current_user.unfollow(@user)
+        
 
         redirect_to tweets_path
     end

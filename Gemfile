@@ -28,6 +28,8 @@ gem 'spring',        group: :development
 gem 'devise'
 
 gem 'carrierwave'
+
+gem 'twitter-text', '~> 1.10.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

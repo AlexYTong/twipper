@@ -7,7 +7,10 @@ Rails.application.routes.draw do
 
   resources :tweets
   resources :profiles
-  resources :relationships, only: [:create]
+  resources :relationships
+  #resources :hashtags only: [:show]
+
+  get 'h/:hash_tag_id', to: 'hashtags#show', as: :hash_tag
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
